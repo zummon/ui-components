@@ -1,10 +1,10 @@
 ---
 import "../styles/global.css";
-const { title, bodyClass } = Astro.props;
+const { title, bodyClass, htmlClass } = Astro.props;
 ---
 
 <!doctype html>
-<html>
+<html class={htmlClass}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />

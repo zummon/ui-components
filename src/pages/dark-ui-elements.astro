@@ -1,9 +1,10 @@
 ---
+import Layout from '../layouts/Layout.astro';
   let title = 'Dark Ui Elements'
   let desc = `Website component with changeable light and dark mode. inspired by https://getuikit.com/`
 ---
 
-<Layout title={title} desc={desc} bodyClass="bg-stone-50 dark:bg-stone-900 dark:text-stone-50">
+<Layout title={title} desc={desc} bodyClass="bg-stone-50 dark:bg-stone-900 dark:text-stone-50" htmlClass="dark">
 	<label class="mb-5 flex items-center justify-center p-4" x-data="">
 		<h1 class="text-3xl sm:text-4xl">Dark Mode →</h1>
 		<input class="ml-4 text-red-500 w-5 h-10" type="checkbox" checked @change="(e)=>{ document.documentElement.classList.toggle('dark', e.target.checked)  }">

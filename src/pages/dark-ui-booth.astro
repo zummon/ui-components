@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+  let title = 'Dark Ui Booth'
+  let desc = `Components to build a website with changeable light and dark mode. inspired by https://getbootstrap.com/`
+---
+
+<Layout title={title} desc={desc} bodyClass="dark:bg-gray-900 dark:text-white" htmlClass="dark">
+	<div class="container mx-auto" x-data="">
+		<div class="mt-3 mb-5 text-center">
+			<!-- https://flowbite.com/docs/forms/toggle/ -->
+			<label class="inline-flex items-center cursor-pointer">
+				<input type="checkbox" checked class="sr-only peer" @change="(e)=>{ document.documentElement.classList.toggle('dark', e.target.checked)  }">
+				<div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+				<span class="ms-3 text-2xl font-medium text-gray-900 dark:text-gray-300">← Dark Mode</span>
+			</label>
+		</div>
+
+		<div class="mb-3 flex flex-wrap justify-center items-center gap-3">
+			<div>
+				<button class="px-2 py-1 bg-gray-800 text-white dark:bg-white dark:text-black rounded">Button</button>
+			</div>
+			<div>
+				<button class="dark:text-white font-semibold">Button</button>
+			</div>
+			<div>
+				<button class="px-4 py-2 bg-blue-600 rounded-md font-semibold text-lg text-white">Button</button>
+			</div>
+			<div>
+				<button class="px-2 py-1 bg-gray-500 text-white rounded">Button</button>
+			</div>
+			<div>
+				<button class="underline dark:text-white underline-offset-2">Link</button>
+			</div>
+		</div>
+
+		<div class="mb-3 p-3">
+			<div class="flex flex-wrap gap-3 justify-center items-center">
+				<div class="flex-auto sm:flex-1">
+
+					<div class="rounded bg-blue-600 dark:bg-gray-500 text-white">
+						<div class="py-2 px-4 border-b border-white border-opacity-30">Header</div>
+						<div class="p-2 px-4">
+							<h5 class="font-medium text-xl">Card</h5>
+							<p class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio aspernatur voluptate nemo reiciendis? Ipsam.</p>
+						</div>
+						<div class="py-2 px-4 border-t border-white border-opacity-30">Footer</div>
+					</div>
+
+				</div>
+				<div class="flex-auto sm:flex-1">
+
+					<div class="shadow-lg rounded-md border border-gray-300 dark:border-gray-500">
+						<img class="h-full w-full" src="/undraw-1.svg">
+						<div class="p-4">
+							<h5 class="font-medium text-xl">Card</h5>
+							<p class="pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, asperiores</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="flex-auto sm:flex-1">
+
+					<div class="p-4">
+						<h5 class="font-medium text-xl">Card</h5>
+						<p class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, reprehenderit pariatur accusamus ipsa soluta eveniet! Impedit id possimus illo rem!</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="mb-5 p-3">
+			<div class="flex flex-wrap gap-3 justify-center items-center">
+				<div class="flex-auto sm:flex-1">
+
+					<div class="flex items-center shadow-lg rounded-md border border-gray-300 dark:border-gray-500">
+						<div class="w-4/12">
+							<img class="h-full w-full" src="/undraw-2.svg">
+						</div>
+						<div class="w-8/12">
+							<div class="p-4">
+								<h5 class="font-medium text-xl">Card</h5>
+								<p class="pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, asperiores</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="flex-auto sm:flex-1">
+
+					<div class="flex items-center rounded bg-blue-600 dark:bg-gray-500 text-white">
+						<div class="w-4/12">
+							<img class="h-full w-full" src="/undraw-3.svg" >
+						</div>
+						<div class="w-8/12">
+							<div class="p-4">
+								<h5 class="font-medium text-xl">Card</h5>
+								<p class="pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, asperiores</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="text-center mb-3 text-gray-500">
+		Made by zummon (Teerapat Anantarattanachai)<br>
+		Something breaks, needs upgrade. Let me know
+	</div>
+</Layout>
