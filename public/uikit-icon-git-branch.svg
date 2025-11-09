@@ -1,0 +1,7 @@
+<!-- UIkit icon git-branch -->
+<svg width="40" height="40" viewBox="0 0 20 20">
+  <path fill="none" stroke="currentColor" d="m13.5,8c0,2.41-1.57,2.87-3.44,3.25-1.47.29-3.56.81-3.56,3.75V5"></path>
+  <circle fill="none" stroke="currentColor" cx="6.5" cy="3" r="1.79"></circle>
+  <circle fill="none" stroke="currentColor" cx="13.5" cy="6" r="1.79"></circle>
+  <circle fill="none" stroke="currentColor" cx="6.5" cy="17" r="1.79"></circle>
+</svg>

@@ -1,0 +1,94 @@
+---
+  let title = 'Dark Ui Elements'
+  let desc = `Website component with changeable light and dark mode. inspired by https://getuikit.com/`
+---
+
+<Layout title={title} desc={desc} bodyClass="bg-stone-50 dark:bg-stone-900 dark:text-stone-50">
+	<label class="mb-5 flex items-center justify-center p-4" x-data="">
+		<h1 class="text-3xl sm:text-4xl">Dark Mode →</h1>
+		<input class="ml-4 text-red-500 w-5 h-10" type="checkbox" checked @change="(e)=>{ document.documentElement.classList.toggle('dark', e.target.checked)  }">
+	</label>
+
+	<div class="max-w-screen-lg mx-auto mb-5 flex flex-wrap gap-4 items-center justify-center">
+		<div class="">
+			<button class="hover:border-b border-stone-900 dark:border-stone-50">TEXT</button>
+		</div>
+		<div class="">
+			<button class="bg-red-500 text-white px-4 leading-8">BUTTON</button>
+		</div>
+		<div class="">
+			<button class="border border-stone-400 px-10 leading-10">BUTTON</button>
+		</div>
+		<div class="">
+			<button class="bg-stone-900 dark:bg-stone-50 text-stone-50 dark:text-stone-900 px-12 leading-[56px]">BUTTON</button>
+		</div>
+	</div>
+
+	<div class="max-w-screen-lg mx-auto mb-5 grid grid-cols-1 items-center justify-center gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-10 px-4">
+		<div class="">
+			<div class="bg-stone-800 text-stone-50 dark:bg-stone-50 dark:text-stone-900 shadow dark:shadow-stone-400">
+				<h3 class="px-5 py-4 text-2xl">Card</h3>
+				<p class="px-5 py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio aspernatur voluptate nemo reiciendis? Ipsam.</p>
+				<div class="px-5 py-4">Footer</div>
+			</div>
+		</div>
+
+		<div class="">
+			<div class="rounded p-4 shadow-md bg-white text-stone-800 dark:bg-stone-800 dark:text-stone-50">
+				<div class="relative p-4">
+					<span class="absolute right-0 rounded-sm bg-red-500 px-2.5 text-sm text-white">LABEL</span>
+					<h3 class="mb-6 text-2xl">Badge</h3>
+					<div class="">
+						<img class="h-auto max-w-full" src="/undraw-nature.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="">
+			<div class="shadow-md bg-white text-stone-800 dark:bg-stone-800 dark:text-stone-50">
+				<div class="flex items-center gap-4 border-b border-stone-300 dark:border-stone-500 px-5 py-4">
+					<div class="">
+						<span class="text-red-500">
+						  <img class="" src="/uikit-icon-git-branch.svg">
+						</span>
+					</div>
+					<div class="">
+						<h3 class="text-2xl">Title</h3>
+						<p class="text-sm text-stone-500 dark:text-stone-400">Subtitle</p>
+					</div>
+				</div>
+				<div class="p-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="max-w-screen-sm mx-auto mb-5 grid grid-cols-1 items-center justify-center gap-8 sm:grid-cols-2 lg:gap-10 px-4">
+		<div class="">
+			<article class="">
+				<h1 class="mb-2 text-3xl">Article</h1>
+				<p class="mb-4 text-stone-500 dark:text-stone-400">Lorem ipsum dolor sit amet.</p>
+				<p class="first-letter:float-left first-letter:mr-2 first-letter:text-5xl text-stone-600 dark:text-stone-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quas illo atque aspernatur iusto nostrum commodi exercitationem delectus ducimus corporis tenetur eius fugit porro officiis similique, quaerat adipisci expedita laudantium!</p>
+			</article>
+		</div>
+
+		<div class="">
+			<article class="">
+				<h1 class="mb-4 text-3xl pb-2 border-b border-stone-300 dark:border-stone-500">List</h1>
+				<dl class="">
+					<dt class="ml-3 mb-2 text-stone-500 dark:text-stone-400">DESCRIPTION</dt>
+					<dd class="text-stone-600 dark:text-stone-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+					<dt class="mt-4 ml-3 mb-2 text-stone-500 dark:text-stone-400">DESCRIPTION</dt>
+					<dd class="text-stone-600 dark:text-stone-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+				</dl>
+			</article>
+		</div>
+	</div>
+
+	<div class="text-center py-5 px-4 text-stone-500 dark:text-stone-400">
+		Made by zummon (Teerapat Anantarattanachai)<br>
+		Something breaks, needs upgrade. Let me know
+	</div>
+</Layout>

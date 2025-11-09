@@ -1,0 +1,18 @@
+---
+import "../styles/global.css";
+const { title, bodyClass } = Astro.props;
+---
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class={bodyClass}>
+		<a class="underline" href="/">home</a>
+		<slot />
+	</body>
+</html>
